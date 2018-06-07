@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import config from 'ember-google-charts/config/environment';
 
 const { RSVP, Service } = Ember;
 
