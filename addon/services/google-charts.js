@@ -1,5 +1,4 @@
 import Ember from 'ember';
-import config from './config/environment';
 
 const { RSVP, Service } = Ember;
 
@@ -15,6 +14,7 @@ export default Service.extend({
     return new RSVP.Promise((resolve, reject) => {
       const { google } = window;
       const wasPreviouslyLoadedInTestSuite = google && google.visualization;
+      const config = Ember.getOwner(this).resolveRegistration('config:environment');
 
       if (this.get('_loadComplete') || wasPreviouslyLoadedInTestSuite) {
 
