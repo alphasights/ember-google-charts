@@ -35,7 +35,7 @@ export default Service.extend({
         google.charts.load('current', {
           language: this.get('language'),
           packages: this.get('googlePackages'),
-          mapsApiKey: config.mapsApiKey,
+          mapsApiKey: config.googleMapsApiKey,
 
           callback: () => {
 
